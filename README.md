@@ -13,7 +13,7 @@ https://zenodo.org/record/3923644#.X7vessKIYaw
 https://carc.usc.edu/user-information/user-guides/high-performance-computing/discovery-resources?fbclid=IwAR3nNkJvUiTvLwBNyOsBtJD01cyuoDreeLG_GDIC-bAOSSrno6xCo_CvSMY
 
 ## Methodology
-Study system: TRP-Cage, a protein with only 20 amino acids (PDB ID = 1L2Y) and Aquaporin (MEM protein).
+Study systems: TRP-Cage, a protein with only 20 amino acids (PDB ID = 1L2Y) and Aquaporin (MEM protein).
 <figure>
   <img src="https://github.com/hoatrinhusc/Gromacs-benchmark/blob/main/trp_vmd.png"/>
 </figure>
