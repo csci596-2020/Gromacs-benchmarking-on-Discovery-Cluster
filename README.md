@@ -25,7 +25,7 @@ Using Gromacs version 2020.3 installed on Discovery cluster.
 | Cut-off radii(nm) | 1 | 1 |
 | PME grid spacing(nm) | 0.16 | 0.12 |
 | Neighbor searching frequency | 10| 10 |
-| Benchmark steps | 500000 | 16000
+| Benchmark steps | 500000 | 16000 |
 
 
 **1. Strong scaling of OpenMP**
