@@ -18,7 +18,7 @@ Study system: TRP-Cage, a protein with only 20 amino acids (PDB ID = 1L2Y).
 Using Gromacs version 2020.3 installed on Discovery cluster.
 
 | MD System  | Trp-Cage | Aquaporin (MEM protein) |
-| ------------- | ------------- |
+| ------------- | ------------- || ------------- |
 | # atoms | 3809  | 81,743 |
 | System size (nm)  |  3.39x3.39x3.39 | 10.8×10.2×9.6 |
 | Time step (fs) | 2 | 2 |
@@ -86,5 +86,6 @@ When the simulation reaches to **less than 300 atoms/core** speed up does **not*
 Similarly, expected performance(ns/day) does not scale up linearly after 15 nodes. As we change the number of nodes from 15 to 20, adding 33% more hardware only adds 17% more performance. Eventually, it reaces to a saturation limit.
 
 ![3](https://user-images.githubusercontent.com/43625587/99996977-58d76e80-2d71-11eb-81eb-b74041ed1fa1.png)
-
-<img src="https://user-images.githubusercontent.com/43625587/99996977-58d76e80-2d71-11eb-81eb-b74041ed1fa1.png" width="100" height="100"/>
+<figure>
+<img src="https://user-images.githubusercontent.com/43625587/99996977-58d76e80-2d71-11eb-81eb-b74041ed1fa1.png"/>
+</figure>
