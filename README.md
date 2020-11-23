@@ -17,15 +17,15 @@ Study system: TRP-Cage, a protein with only 20 amino acids (PDB ID = 1L2Y).
 
 Using Gromacs version 2020.3 installed on Discovery cluster.
 
-| MD System  | Trp-Cage |
+| MD System  | Trp-Cage | Aquaporin (MEM protein)
 | ------------- | ------------- |
-| # atoms | 3809  |
-| System size (nm)  |  3.39x3.39x3.39 |
-| Time step (fs) | 2 |
-| Cut-off radii(nm) | 1 |
-| PME grid spacing(nm) | 0.16 |
-| Neighbor searching frequency | 10|
-| Benchmark steps | 500000 |
+| # atoms | 3809  | 81,743 |
+| System size (nm)  |  3.39x3.39x3.39 | 10.8×10.2×9.6 |
+| Time step (fs) | 2 | 2 |
+| Cut-off radii(nm) | 1 | 1 |
+| PME grid spacing(nm) | 0.16 | 0.12 |
+| Neighbor searching frequency | 10| 10 |
+| Benchmark steps | 500000 | 16000
 
 
 **1. Strong scaling of OpenMP**
@@ -70,3 +70,5 @@ According to the table, while other costs are quite the same for 3 cartergories,
 </figure>
  From the figure, we see that when we increase # of PME ranks to 4, there is a significant decrease in cost due to the speed up in PME mesh calculation. But when we increase # of PME ranks to 10, there is a significant increase in cost due to the slow down by the waiting time between PME ranks and PP ranks. 
  This analysis, however, is not complete, since there are other factors like load imbalancing, etc... which we might consider in the future.
+
+**3. Strong scaling of MPI**
