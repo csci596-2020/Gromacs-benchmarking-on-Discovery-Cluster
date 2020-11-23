@@ -87,5 +87,5 @@ Similarly, expected performance(ns/day) does not scale up linearly after 15 node
 
 ![3](https://user-images.githubusercontent.com/43625587/99996977-58d76e80-2d71-11eb-81eb-b74041ed1fa1.png)
 
-<img src="https://user-images.githubusercontent.com/43625587/99996977-58d76e80-2d71-11eb-81eb-b74041ed1fa1.png" width="200" height="200"/>
+<img src="https://user-images.githubusercontent.com/43625587/99996977-58d76e80-2d71-11eb-81eb-b74041ed1fa1.png" width="500" height="500"/>
 
