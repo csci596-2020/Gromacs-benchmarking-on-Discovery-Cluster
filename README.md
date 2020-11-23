@@ -2,7 +2,7 @@
 
 # Project Title : Gromacs benchmarking
 
-## Group
+## Group 
 
 Trinh Lan Hoa and Samprita Nandi
 
@@ -13,7 +13,7 @@ https://zenodo.org/record/3923644#.X7vessKIYaw
 https://carc.usc.edu/user-information/user-guides/high-performance-computing/discovery-resources?fbclid=IwAR3nNkJvUiTvLwBNyOsBtJD01cyuoDreeLG_GDIC-bAOSSrno6xCo_CvSMY
 
 ## Methodology
-Study system: TRP-Cage, a protein with only 20 amino acids (PDB ID = 1L2Y).
+Study system: TRP-Cage, a protein with only 20 amino acids (PDB ID = 1L2Y) and Aquaporin (MEM protein).
 <figure>
   <img src="https://github.com/hoatrinhusc/Gromacs-benchmark/blob/main/trp_vmd.png"/>
 </figure>
@@ -86,11 +86,11 @@ nodes = 1,4,10,...,50,60,70; ntask-per-node = 16, cpu-per-task = 1; first 6 calc
 When the simulation reaches to **less than 300 atoms/core** speed up does **not** increase linearly with no of nodes anymore. Red line denotes the perfect scale up.
 
 
-<img src="https://user-images.githubusercontent.com/43625587/99996974-57a64180-2d71-11eb-9bc6-89bffa2a2069.png" width="600" height="400"/>
+<img src="https://user-images.githubusercontent.com/43625587/99996974-57a64180-2d71-11eb-9bc6-89bffa2a2069.png" width="400" height="300"/>
 
 Similarly, expected performance(ns/day) does not scale up linearly after 15 nodes. As we change the number of nodes from 15 to 20, adding 33% more hardware only adds 17% more performance. Eventually, it reaces to a saturation limit.
 
 
 
-<img src="https://user-images.githubusercontent.com/43625587/99996977-58d76e80-2d71-11eb-81eb-b74041ed1fa1.png" width="600" height="400"/>
+<img src="https://user-images.githubusercontent.com/43625587/99996977-58d76e80-2d71-11eb-81eb-b74041ed1fa1.png" width="400" height="300"/>
 
