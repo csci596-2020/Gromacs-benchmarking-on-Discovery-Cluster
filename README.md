@@ -2,6 +2,11 @@
 
 # Project Title : Gromacs benchmarking
 
+## Group
+
+Trinh Lan Hoa
+Samprita Nandi
+
 ## Gromacs introduction
 https://zenodo.org/record/3923644#.X7vessKIYaw
 
