@@ -4,8 +4,7 @@
 
 ## Group
 
-Trinh Lan Hoa
-Samprita Nandi
+Trinh Lan Hoa and Samprita Nandi
 
 ## Gromacs introduction
 https://zenodo.org/record/3923644#.X7vessKIYaw
@@ -76,10 +75,11 @@ According to the table, while other costs are quite the same for 3 cartergories,
  From the figure, we see that when we increase # of PME ranks to 4, there is a significant decrease in cost due to the speed up in PME mesh calculation. But when we increase # of PME ranks to 10, there is a significant increase in cost due to the slow down by the waiting time between PME ranks and PP ranks. 
  This analysis, however, is not complete, since there are other factors like load imbalancing, etc... which we might consider in the future.
 
+
 **3. Strong scaling of MPI**
 
 Pure MPI jobs
-nodes = 1,4,10,...,50,60,70; ntask-per-node = 16, cpu-per-task = 1; first 6 calculation done only on Xeon silver 4116 processor @ 2.1GHz frequency
+nodes = 1,4,10,...,50,60,70; ntask-per-node = 16, cpu-per-task = 1; first 6 calculation done paricularly on Xeon silver 4116 processor @ 2.1GHz 
 
 <img src="https://user-images.githubusercontent.com/43625587/100000554-968ac600-2d76-11eb-9618-eee054e1ad2c.png" width="600" height="400"/>
 
