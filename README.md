@@ -79,8 +79,6 @@ According to the table, while other costs are quite the same for 3 cartergories,
  From the figure, we see that when we increase # of PME ranks to 4, there is a significant decrease in cost due to the speed up in PME mesh calculation. But when we increase # of PME ranks to 10, there is a significant increase in cost due to the slow down by the waiting time between PME ranks and PP ranks. 
  This analysis, however, is not complete, since there are other factors like load imbalancing, etc... which we might consider in the future.
 
-
-
 **3. Strong scaling using MPI method**
 
 Pure MPI jobs: 
