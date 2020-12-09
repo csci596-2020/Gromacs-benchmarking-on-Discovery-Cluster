@@ -27,16 +27,20 @@ Using Gromacs version 2020.3 installed on Discovery cluster.
 | System size (nm)  |  3.39x3.39x3.39 | 10.8×10.2×9.6 |
 | Time step (fs) | 2 | 2 |
 | Cut-off radii(nm) | 1 | 1 |
-| PME grid spacing(nm) | 0.16 | 0.12 |
+| PME grid spacing(nm) | 0.10 | 0.12 |
 | Neighbor searching frequency | 10| 10 |
-| Benchmark steps | 500000 | 16000 |
+| Benchmark steps | 50000 | 16000 |
 
 
 **1. Strong scaling of OpenMP**
 
 Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
 <figure>
-  <img src="https://github.com/hoatrinhusc/Gromacs-benchmark/blob/main/1MPI-OpenMP.png"/>
+  <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/1MPI-OpenMP.png"/>
+</figure>
+
+<figure>
+  <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/OpenMP_speedup.png"/>
 </figure>
 
 Modern computers have a limited number of threads, but even if the number of threads are unlimited, we don't gain speed up due to strong scaling.
@@ -74,6 +78,7 @@ According to the table, while other costs are quite the same for 3 cartergories,
 </figure>
  From the figure, we see that when we increase # of PME ranks to 4, there is a significant decrease in cost due to the speed up in PME mesh calculation. But when we increase # of PME ranks to 10, there is a significant increase in cost due to the slow down by the waiting time between PME ranks and PP ranks. 
  This analysis, however, is not complete, since there are other factors like load imbalancing, etc... which we might consider in the future.
+
 
 
 **3. Strong scaling using MPI method**
