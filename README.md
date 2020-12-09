@@ -94,7 +94,11 @@ Similarly, expected performance(ns/day) does not scale up linearly after 15 node
 
 <img src="https://user-images.githubusercontent.com/43625587/99996977-58d76e80-2d71-11eb-81eb-b74041ed1fa1.png" width="500" height="350"/>
 
-**4. Hybrid system(MPI+Openmp+GPU)
+**4. Hybrid method(MPI+Openmp+GPU)
+
+In this section, we are checking the pwrformance output(ns/day) as we increase the number of resources both in terms of cpu and gpu. Here, ntasks-per node = 4,cpus-per-task=2 and gpus-per-node = 1. As we increase the number of nodes, the number of gpus requested also increase linearly so as the MPI ranks. 
+
+<img src="https://user-images.githubusercontent.com/74804041/101667500-42cddd00-3a04-11eb-8ebf-955565e17985.png" width="500" height="350"/>
 
 
 
