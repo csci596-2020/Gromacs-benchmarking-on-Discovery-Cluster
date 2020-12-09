@@ -83,7 +83,8 @@ According to the table, while other costs are quite the same for 3 cartergories,
  
 **3. Strong scaling using MPI method**
 
-Pure MPI jobs:<\br>
+Pure MPI jobs:
+
 System : Aquaporin (MEM protein). In this section, ntask-per-node = 16, cpu-per-task = 1, we are varying no of nodes like 1,4,10,...,50,60,70,calculations are done paricularly on Xeon silver 4116 processor @ 2.1GHz. The image below shoes the output in terms of performance(ns/day) as we increase the number of resources. 
 
 
