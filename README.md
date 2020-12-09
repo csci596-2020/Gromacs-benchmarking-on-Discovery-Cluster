@@ -33,6 +33,7 @@ Using Gromacs version 2020.3 installed on Discovery cluster.
 
 
 **1. Strong scaling of OpenMP**
+
 Systems: TRP-Cage.<br/>
 Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
 <figure>
@@ -46,6 +47,7 @@ Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
 In the figure, speed up as well as wall clock time is saturated around 15 OpenMP threads. When more than 25 OpenMP threads are used, there is a decrease in the performance. Modern computers have a limited number of threads, but even if the number of threads are unlimited, we don't gain speed up due to strong scaling.
 
 **2. MPI as a solution**
+
 Systems: TRP-Cage.<br/>
 To overcome strong scaling of OpenMP and gain speed up, MPI is used to connect different computing nodes. However, the price is the communication between MPI processes.
 
@@ -77,7 +79,8 @@ According to the table, while other costs are quite the same for 3 cartergories,
   <img src="https://github.com/hoatrinhusc/Gromacs-benchmark/blob/main/PME_breakdown.png"/>
 </figure>
  From the figure, we see that when we increase # of PME ranks to 4, there is a significant decrease in cost due to the speed up in PME mesh calculation. But when we increase # of PME ranks to 10, there is a significant increase in cost due to the slow down by the waiting time between PME ranks and PP ranks. 
- This analysis, however, is not complete, since there are other factors like load imbalancing, etc... which we might consider in the future.<br/>
+ This analysis, however, is not complete, since there are other factors like load imbalancing, etc... which we might consider in the future.
+ <br/>
 
 **3. Strong scaling using MPI method**
 
@@ -103,6 +106,7 @@ Next, efficiency is calculated from the result and shown below.
 <img src="https://user-images.githubusercontent.com/43625587/99996977-58d76e80-2d71-11eb-81eb-b74041ed1fa1.png" width="500" height="350"/>
 
 **4. Hybrid method(MPI+Openmp+GPU)**
+
 Systems: TRP-Cage.<br/>
 In this section, we are checking the performance output(ns/day) as we increase the number of resources both in terms of cpu and gpu. Here, ntasks-per node = 4,cpus-per-task=2 and gpus-per-node = 1 on on Xeon 2640v4 processor @ 2.4GHz. As we increase the number of nodes, the number of gpus requested also increase linearly so as the MPI ranks. 
 
