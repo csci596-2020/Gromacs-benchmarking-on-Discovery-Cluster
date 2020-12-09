@@ -76,29 +76,36 @@ According to the table, while other costs are quite the same for 3 cartergories,
  This analysis, however, is not complete, since there are other factors like load imbalancing, etc... which we might consider in the future.
 
 
-**3. Strong scaling of MPI**
+**3. Strong scaling using MPI method**
 
-Pure MPI jobs
-nodes = 1,4,10,...,50,60,70; ntask-per-node = 16, cpu-per-task = 1; first 6 calculation done paricularly on Xeon silver 4116 processor @ 2.1GHz 
+Pure MPI jobs: 
 
-<img src="https://user-images.githubusercontent.com/43625587/100000554-968ac600-2d76-11eb-9618-eee054e1ad2c.png" width="500" height="350"/>
-
-When resources used in the simulation  reach to **less than 300 atoms/core** speed up does **not** increase linearly with no of nodes anymore. Red line denotes the perfect scale up.
+System : Aquaporin (MEM protein). In this section, ntask-per-node = 16, cpu-per-task = 1, we are varying no of nodes like 1,4,10,...,50,60,70,calculations are done paricularly on Xeon silver 4116 processor @ 2.1GHz. The image below shoes the output in terms of performance(ns/day) as we increase the number of resources. 
 
 
 <img src="https://user-images.githubusercontent.com/43625587/99996974-57a64180-2d71-11eb-9bc6-89bffa2a2069.png" width="500" height="350"/>
 
-Similarly, expected performance(ns/day) does not scale up linearly after 15 nodes. As we change the number of nodes from 15 to 20, adding 33% more hardware only adds 17% more performance. Eventually, it reaces to a saturation limit.
+We see here expected performance(ns/day) does not scale up linearly beyond 250 corses(15 nodes here). As we change the number of nodes from 15 to 20, adding 33% more hardware only adds 17% more performance. Eventually, it reaces to a saturation limit. We have calculated speedup from the walltime and next graph shows behaviour of the speedup with no of resources. 
+
+<img src="https://user-images.githubusercontent.com/43625587/100000554-968ac600-2d76-11eb-9618-eee054e1ad2c.png" width="500" height="350"/>
+
+When resources used in the simulation  reach to **less than 300 atoms/core** speed up does **not** increase linearly with no of nodes anymore due to strong scaling. Red line denotes the perfect scale up.
 
 
+<img src="https://user-images.githubusercontent.com/43625587/99996974-57a64180-2d71-11eb-9bc6-89bffa2a2069.png" width="500" height="350"/>
+
+
+Next, efficiency is calculated from the result and shown below. 
 
 <img src="https://user-images.githubusercontent.com/43625587/99996977-58d76e80-2d71-11eb-81eb-b74041ed1fa1.png" width="500" height="350"/>
 
 **4. Hybrid method(MPI+Openmp+GPU)**
 
-In this section, we are checking the pwrformance output(ns/day) as we increase the number of resources both in terms of cpu and gpu. Here, ntasks-per node = 4,cpus-per-task=2 and gpus-per-node = 1. As we increase the number of nodes, the number of gpus requested also increase linearly so as the MPI ranks. 
+In this section, we are checking the pwrformance output(ns/day) as we increase the number of resources both in terms of cpu and gpu. Here, ntasks-per node = 4,cpus-per-task=2 and gpus-per-node = 1 on on Xeon 2640v4 processor @ 2.4GHz. As we increase the number of nodes, the number of gpus requested also increase linearly so as the MPI ranks. 
 
 <img src="https://user-images.githubusercontent.com/74804041/101670915-a5c17300-3a08-11eb-8755-58659c3b266e.png" width="500" height="350"/>
+
+From the figure, we see that as we increase gpus and cpus, after a optimum level  there is a significant decrease in the output due to communication cost. So, for this system the optimum resource is 4 nodes + 4 gpus. 
 
 
 
