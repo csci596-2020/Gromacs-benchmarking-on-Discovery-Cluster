@@ -33,7 +33,7 @@ Using Gromacs version 2020.3 installed on Discovery cluster.
 
 
 **1. Strong scaling of OpenMP**
-
+Systems: TRP-Cage.//
 Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
 <figure>
   <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/1MPI-OpenMP.png"/>
@@ -43,7 +43,7 @@ Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
   <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/OpenMP_speedup.png"/>
 </figure>
 
-Modern computers have a limited number of threads, but even if the number of threads are unlimited, we don't gain speed up due to strong scaling.
+From the figure, we see that speed up as well as wall clock time is saturated around 15 OpenMP threads. When we use more than 25 OpenMP threads, there is a decrease in performance. Modern computers have a limited number of threads, but even if the number of threads are unlimited, we don't gain speed up due to strong scaling.
 
 **2. MPI as a solution**
 
@@ -104,7 +104,7 @@ Next, efficiency is calculated from the result and shown below.
 
 **4. Hybrid method(MPI+Openmp+GPU)**
 
-In this section, we are checking the pwrformance output(ns/day) as we increase the number of resources both in terms of cpu and gpu. Here, ntasks-per node = 4,cpus-per-task=2 and gpus-per-node = 1 on on Xeon 2640v4 processor @ 2.4GHz. As we increase the number of nodes, the number of gpus requested also increase linearly so as the MPI ranks. 
+In this section, we are checking the performance output(ns/day) as we increase the number of resources both in terms of cpu and gpu. Here, ntasks-per node = 4,cpus-per-task=2 and gpus-per-node = 1 on on Xeon 2640v4 processor @ 2.4GHz. As we increase the number of nodes, the number of gpus requested also increase linearly so as the MPI ranks. 
 
 <img src="https://user-images.githubusercontent.com/74804041/101670915-a5c17300-3a08-11eb-8755-58659c3b266e.png" width="500" height="350"/>
 
