@@ -44,7 +44,7 @@ Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
   <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/OpenMP_speedup.png"/>
 </figure>
 
-In the figure, speed up as well as wall clock time is saturated around 15 OpenMP threads. When more than 25 OpenMP threads are used, there is a decrease in the performance. Modern computers have a limited number of threads, but even if the number of threads are unlimited, we don't gain speed up due to strong scaling.
+In the figures, speed up as well as wall clock time is saturated around 15 OpenMP threads. When more than 25 OpenMP threads are used, there is a decrease in the performance. Modern computers have a limited number of threads, but even if the number of threads are unlimited, we don't gain speed up due to strong scaling.
 
 **2. MPI as a solution**
 
@@ -79,8 +79,7 @@ According to the table, while other costs are quite the same for 3 cartergories,
   <img src="https://github.com/hoatrinhusc/Gromacs-benchmark/blob/main/PME_breakdown.png"/>
 </figure>
  From the figure, we see that when we increase # of PME ranks to 4, there is a significant decrease in cost due to the speed up in PME mesh calculation. But when we increase # of PME ranks to 10, there is a significant increase in cost due to the slow down by the waiting time between PME ranks and PP ranks. 
- This analysis, however, is not complete, since there are other factors like load imbalancing, etc... which we might consider in the future.
- <br/>
+ This analysis, however, is not complete, since there are other factors like load imbalancing, etc... which we might consider in the future.\
 
 **3. Strong scaling using MPI method**
 
