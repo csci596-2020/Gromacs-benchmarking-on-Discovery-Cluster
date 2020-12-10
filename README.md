@@ -41,6 +41,11 @@ TRP-Cage             |  Aquaporin
 Systems: TRP-Cage.
 
 Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
+
+Wall clock time             |  Speed-up
+:-------------------------:|:-------------------------:
+![](https://github.com/csci596-2020/Gromacs-benchmark/blob/main/1MPI-OpenMP.png)  |  ![](https://github.com/csci596-2020/Gromacs-benchmark/blob/main/OpenMP_speedup.png)
+
 <figure>
   <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/1MPI-OpenMP.png"/>
 </figure>
