@@ -46,14 +46,6 @@ Wall clock time             |  Speed-up
 :-------------------------:|:-------------------------:
 ![](https://github.com/csci596-2020/Gromacs-benchmark/blob/main/1MPI-OpenMP.png)  |  ![](https://github.com/csci596-2020/Gromacs-benchmark/blob/main/OpenMP_speedup.png)
 
-<figure>
-  <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/1MPI-OpenMP.png"/>
-</figure>
-
-<figure>
-  <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/OpenMP_speedup.png"/>
-</figure>
-
 In the figures, speed up as well as wall clock time is saturated around 15 OpenMP threads. When more than 25 OpenMP threads are used, there is a decrease in the performance. Modern computers have a limited number of threads, but even if the number of threads are unlimited, we don't gain speed up due to strong scaling.
 
 **2. MPI as a solution**
