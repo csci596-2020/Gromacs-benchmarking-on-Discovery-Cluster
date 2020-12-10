@@ -19,10 +19,6 @@ TRP-Cage             |  Aquaporin
 :-------------------------:|:-------------------------:
 ![](https://github.com/hoatrinhusc/Gromacs-benchmark/blob/main/trp_vmd.png)  |  ![](https://github.com/csci596-2020/Gromacs-benchmark/blob/main/Aquaporin-Sideview.png)
 
-<figure>
-  <img src="https://github.com/hoatrinhusc/Gromacs-benchmark/blob/main/trp_vmd.png"/>
-</figure>
-
 
 Using Gromacs version 2020.3 installed on Discovery cluster.
 
