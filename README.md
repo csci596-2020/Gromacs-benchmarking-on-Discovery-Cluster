@@ -6,14 +6,18 @@
 
 Trinh Lan Hoa and Samprita Nandi
 
-## Gromacs introduction
+## Gromacs software
+Gromacs is one of the fastest molecular dynamics simulation packages currently. It is used widely by researchers in the fields of computational biology, physics...
+
+More information about Gromacs can be found here:
+
 https://zenodo.org/record/3923644#.X7vessKIYaw
 
-## Discovery cluster introduction
+## Discovery cluster
 https://carc.usc.edu/user-information/user-guides/high-performance-computing/discovery-resources?fbclid=IwAR3nNkJvUiTvLwBNyOsBtJD01cyuoDreeLG_GDIC-bAOSSrno6xCo_CvSMY
 
 ## Methodology
-Study systems: TRP-Cage, a protein with only 20 amino acids (PDB ID = 1L2Y) and Aquaporin (MEM protein).
+Study systems: TRP-Cage, a protein with only 20 amino acids (PDB ID = 1L2Y) and Aquaporin, a membrane protein.
 
 TRP-Cage             |  Aquaporin
 :-------------------------:|:-------------------------:
