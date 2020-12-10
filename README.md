@@ -34,7 +34,8 @@ Using Gromacs version 2020.3 installed on Discovery cluster.
 
 **1. Strong scaling of OpenMP**
 
-Systems: TRP-Cage.<br/>
+Systems: TRP-Cage.
+
 Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
 <figure>
   <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/1MPI-OpenMP.png"/>
