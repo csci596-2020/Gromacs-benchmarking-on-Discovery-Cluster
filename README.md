@@ -116,5 +116,8 @@ In this section, we are checking the performance output(ns/day) as we increase t
 
 From the figure, we see that as we increase gpus and cpus, after a optimum level  there is a significant decrease in the output due to communication cost. So, for this system the optimum resource is 4 nodes + 4 gpus. 
 
+**5. Conclusion**
+
+In this study, we have shown the strong scaling limit in two different systems with different number of atoms. Thus, we have to choose resources wisely to achieve optimum performance without wasing much compuation resources.
 
 
