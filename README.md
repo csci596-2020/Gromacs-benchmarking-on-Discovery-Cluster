@@ -118,6 +118,6 @@ From the figure, we see that as we increase gpus and cpus, after a optimum level
 
 **5. Conclusion**
 
-In this study, we have shown the strong scaling limit in two different systems with different number of atoms. Thus, we have to choose resources wisely to achieve optimum performance without wasing much compuation resources.
+In this study, we have shown the strong scaling limit in two different biomolecule systems consisting of different number of atoms. Thus, we have to choose computational resources wisely to achieve optimum performance without wasting much resources.
 
 
