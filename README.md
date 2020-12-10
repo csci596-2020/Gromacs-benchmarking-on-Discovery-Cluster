@@ -60,20 +60,20 @@ As a study case of MPI communication cost, I consider 50 MPI processes. All the 
   <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/MPI_PME_xeonv4.png"/>
 </figure>
 
-The table below breaks down the computing cost into the cost of each major component ( each accounts for more than 2% of total wall-clock time) . The cost is measured in the total Sum of Giga-Cycles. Note that 20MPI-0PME means no seperate ranks for PME calculations, 20MPI-4PME means among 20 MPI ranks, 4 ranks are dedicated for PME calculation and 16 ranks are used for particle-particle interaction (PP).
+The table below breaks down the computing cost into the cost of each major component. The cost is measured in the total Sum of Giga-Cycles. Note that 50MPI-5PME means among 50 MPI ranks, 5 ranks are dedicated for PME calculation and 45 ranks are used for particle-particle interaction (PP),50MPI-0PME means no seperate ranks for PME calculations.
 
 
-| Computing  | 20MPI-0PME | 20MPI-4PME |  20MPI-10PME |
+| Computing  | 50MPI-5PME | 50MPI-20E |  50MPI-0PME |
 | ------------- | ------------- | ------------- | ------------- |
-| Domain decomp. | 72.341  | 48.588 | 40.588 |
-| Neighbor search  | 84.652 | 69.198 | 72.632 |
-|  Comm. coord. | 297.054 | 207.974 | 148.992 |
-| Force | 1887.417 | 1824.295 | 1735.850 |
-| Wait + Comm. F | 299.149 | 356.349 | 197.719 |
-| PME mesh | 2105.949 | 645.770 | 1136.321 |
-| PME wait for PP | 0 | 100.144 | 1219.859 |
-| Wait + Recv. PME F | 0 | 288.256 | 7.370 |
-| Total PME cost | 2105.949 | 1034.17 | 2363.55 |
+| Domain decomp. | 14.303  | 8.631 | 16.906 |
+| Neighbor search  | 15.907  | 8.852 | 14.509 |
+|  Comm. coord. | 78.006 | 42.957 | 84.993 |
+| Force | 362.643 | 244.736 | 239.064 |
+| Wait + Comm. F | 183.130 | 71.440 | 81.855 |
+| PME mesh | 94.766 | 248.676 | 752.059 |
+| PME 3D-FFT Comm | 22.665 | 66.138 | 232.457 |
+| PME wait for PP | 10.883 | 37.915  | 0|
+| Wait + Recv. PME F | 246.225 | 17.998 | 0|
 
 According to the table, while other costs are quite the same for 3 cartergories, the PME cost are significantly different. So it makes sense that to study MPI communication cost for the TRP-Cage system, we can focus on PME cost. 
 
