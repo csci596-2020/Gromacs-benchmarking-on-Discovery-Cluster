@@ -2,7 +2,7 @@
 
 # Project Title : Gromacs benchmarking
 
-## Group 
+## Group members
 
 Trinh Lan Hoa and Samprita Nandi
 
