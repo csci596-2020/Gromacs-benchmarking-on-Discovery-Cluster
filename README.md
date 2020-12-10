@@ -57,7 +57,7 @@ Gromacs uses the particle-mesh Ewald (PME) algorithms to treat the long-ranged c
 
 As a study case of MPI communication cost, I consider 50 MPI processes. All the MPI processes are Xeon-2640v4. Then, I varies the number of MPI ranks dedicated for PME work and benchmark MD performance.
 <figure>
-  <img src="https://github.com/hoatrinhusc/Gromacs-benchmark/blob/main/MPI_PME_xeonv4.png"/>
+  <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/MPI_PME_xeonv4.png"/>
 </figure>
 
 The table below breaks down the computing cost into the cost of each major component ( each accounts for more than 2% of total wall-clock time) . The cost is measured in the total Sum of Giga-Cycles. Note that 20MPI-0PME means no seperate ranks for PME calculations, 20MPI-4PME means among 20 MPI ranks, 4 ranks are dedicated for PME calculation and 16 ranks are used for particle-particle interaction (PP).
