@@ -99,7 +99,7 @@ We see here expected performance(ns/day) does not scale up linearly beyond 250 c
 When resources used in the simulation  reach to **less than 300 atoms/core** speed up does **not** increase linearly with no of nodes anymore due to strong scaling. Red line denotes the perfect scale up.
 
 
-<img src="https://user-images.githubusercontent.com/43625587/99996974-57a64180-2d71-11eb-9bc6-89bffa2a2069.png" width="500" height="350"/>
+
 
 
 Next, efficiency is calculated from the result and shown below. 
