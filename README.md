@@ -55,12 +55,14 @@ To overcome strong scaling of OpenMP and gain speed up, MPI is used to connect d
 
 Gromacs uses the particle-mesh Ewald (PME) algorithms to treat the long-ranged component of the non-bonded interaction. Because the algorithm uses a 3D FFT that requires global communication, its parallel efficiency gets worse as more ranks participate. 
 
-As a study case of MPI communication cost, I consider 50 MPI processes. All the MPI processes are Xeon-2640v4. Then, I varies the number of MPI ranks dedicated for PME work and benchmark MD performance.
+As a study case of MPI communication cost, 50 MPI processes are considered. All the MPI processes are Xeon-2640v4. Then, the number of MPI ranks dedicated for PME work are varied. 
+
+Benchmarking MD performance:
 <figure>
   <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/MPI_PME_xeonv4.png"/>
 </figure>
 
-The table below breaks down the computing cost into the cost of each major component. The cost is measured in the total Sum of Giga-Cycles. Note that 50MPI-5PME means among 50 MPI ranks, 5 ranks are dedicated for PME calculation and 45 ranks are used for particle-particle interaction (PP),50MPI-0PME means no seperate ranks for PME calculations.
+The table below breaks down the computing cost into the cost of each major component. The cost is measured in the total Sum of Giga-Cycles. Note that 50MPI-5PME means among 50 MPI ranks, 5 ranks are dedicated for PME calculation and 45 ranks are used for particle-particle interaction (PP), 50MPI-0PME means no seperate ranks for PME calculations.
 
 
 | Computing  | 50MPI-5PME | 50MPI-20E |  50MPI-0PME |
@@ -78,10 +80,9 @@ The table below breaks down the computing cost into the cost of each major compo
 According to the table, while other costs are quite the same for 3 cartergories, the PME cost are significantly different. So it makes sense that to study MPI communication cost for the TRP-Cage system, we can focus on PME cost. 
 
 <figure>
-  <img src="https://github.com/hoatrinhusc/Gromacs-benchmark/blob/main/PME_breakdown.png"/>
+  <img src="https://github.com/csci596-2020/Gromacs-benchmark/blob/main/FFT%20cost.png"/>
 </figure>
- From the figure, we see that when we increase # of PME ranks to 4, there is a significant decrease in cost due to the speed up in PME mesh calculation. But when we increase # of PME ranks to 10, there is a significant increase in cost due to the slow down by the waiting time between PME ranks and PP ranks. 
- This analysis, however, is not complete, since there are other factors like load imbalancing, etc... which we might consider in the future.
+ From the figure, we see that when using all 50 MPI ranks for PME calculation, there is a huge increase in the communication cost of 3D Fast Fourier transform. That makes the performance get worse. 
  
 **3. Strong scaling using MPI method**
 
