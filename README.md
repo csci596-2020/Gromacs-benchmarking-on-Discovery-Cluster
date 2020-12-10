@@ -7,7 +7,7 @@
 Trinh Lan Hoa and Samprita Nandi
 
 ## Gromacs software
-Gromacs is one of the fastest molecular dynamics simulation packages currently. It is used widely by researchers in the fields of computational biology, physics...
+Gromacs is one of the fastest molecular dynamics simulation packages. It is used widely by researchers in the fields of computational biology, physics...
 
 More information about Gromacs can be found here:
 
@@ -19,12 +19,12 @@ https://carc.usc.edu/user-information/user-guides/high-performance-computing/dis
 ## Methodology
 Study systems: TRP-Cage, a protein with only 20 amino acids (PDB ID = 1L2Y) and Aquaporin, a membrane protein.
 
+Using Gromacs version 2020.3 installed on Discovery cluster.
+
 TRP-Cage             |  Aquaporin
 :-------------------------:|:-------------------------:
 ![](https://github.com/hoatrinhusc/Gromacs-benchmark/blob/main/trp_vmd.png)  |  ![](https://github.com/csci596-2020/Gromacs-benchmark/blob/main/Aquaporin-Sideview.png)
 
-
-Using Gromacs version 2020.3 installed on Discovery cluster.
 
 | MD System  | Trp-Cage | Aquaporin (MEM protein) |
 | ------------- | ------------- | ------------- |
@@ -35,6 +35,7 @@ Using Gromacs version 2020.3 installed on Discovery cluster.
 | PME grid spacing(nm) | 0.10 | 0.12 |
 | Neighbor searching frequency | 10| 10 |
 | Benchmark steps | 50000 | 16000 |
+
 
 
 **1. Strong scaling of OpenMP**
