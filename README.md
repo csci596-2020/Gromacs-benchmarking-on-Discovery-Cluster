@@ -9,9 +9,7 @@ Trinh Lan Hoa and Samprita Nandi
 ## Gromacs software
 Gromacs is one of the fastest molecular dynamics simulation packages. It is used widely by researchers in the fields of computational biology, physics...
 
-More information about Gromacs can be found here:
-
-https://zenodo.org/record/3923644#.X7vessKIYaw
+More information about Gromacs can be found here: https://zenodo.org/record/3923644#.X7vessKIYaw
 
 ## Discovery cluster
 https://carc.usc.edu/user-information/user-guides/high-performance-computing/discovery-resources?fbclid=IwAR3nNkJvUiTvLwBNyOsBtJD01cyuoDreeLG_GDIC-bAOSSrno6xCo_CvSMY
